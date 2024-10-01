@@ -1,0 +1,37 @@
+<div class="p-4"
+     *ngIf="!fakerData">
+  No faker data was loaded!
+</div>
+
+<div class="p-4 pt-0" *ngIf="!!fakerData">
+  <p-card class="col-12">
+    <p>
+      This component uses the <a href="https://primeng.org/galleria" target="_blank">PrimeNG Galleria Component</a> to render the Faker
+      Data.
+    </p>
+  </p-card>
+
+  <p-galleria [value]="fakerData"
+              [(activeIndex)]="activeIndex"
+              [showIndicators]="true"
+              [showThumbnails]="false"
+              [showItemNavigators]="true"
+              [showItemNavigatorsOnHover]="true"
+              [containerStyle]="{ 'max-width': '380px' }"
+  >
+    <ng-template pTemplate="item" let-item>
+      <ng-template pTemplate="header">
+        {{ item.title }}
+      </ng-template>
+
+      <p-image src="{{item.url}}"
+               width="380"
+               height="480"
+               alt="{{item.description}}"
+      />
+    </ng-template>
+    <ng-template pTemplate="footer" let-item *ngIf="fakerData">
+      {{ fakerData[activeIndex].description }}
+    </ng-template>
+  </p-galleria>
+</div>

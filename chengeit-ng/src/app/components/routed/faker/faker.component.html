@@ -1,0 +1,14 @@
+<div class="flex flex-column justify-content-around p-4 pt-0">
+  <div *ngIf="!fakerData">No faker data was loaded!</div>
+
+  <div class="flex gap-4 flex-wrap justify-content-around" *ngIf="!!fakerData">
+    <p-card class="col-12">
+      <p>Here I use custom nested components to render the Faker Data in a responsive flex display.</p>
+      <p>Hover the images to see the descriptions.</p>
+    </p-card>
+
+    <app-faker-model-display [fakerModel]="fakerModel"
+                             *ngFor="let fakerModel of (fakerData | async)"
+    ></app-faker-model-display>
+  </div>
+</div>

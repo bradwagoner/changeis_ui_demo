@@ -1,0 +1,12 @@
+<div class="flex justify-content-between p-2">
+  <p-breadcrumb [model]="routes" styleClass="border-none">
+    <ng-template pTemplate="item" let-item>
+      <a [routerLink]="item.url">{{ item.label }}</a>
+    </ng-template>
+    <ng-template pTemplate="separator"> |</ng-template>
+  </p-breadcrumb>
+
+  <div>
+    <a href="http://localhost:3000">React Changeis</a>
+  </div>
+</div>
