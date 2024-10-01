@@ -56,7 +56,6 @@ export class FakerDataCarousel extends Component<{}, {
             </Carousel.Item>
         });
 
-        console.log('displayItems:', displayItems);
         return (
             <div className='col-11 col-lg-6 col-xl-5 p-4'>
                 <Card className='p-2 d-flex justify-content-evenly'>

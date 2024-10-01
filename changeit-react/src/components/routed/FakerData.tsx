@@ -41,10 +41,11 @@ export class FakerData extends React.Component<{}, {
             return <div className='error-message-class'>{this.state.error}</div>
         }
 
-        let displayItems: any = this.state.items.map(item => {
+        let displayItems: any = this.state.items.map((item, index) => {
             return <FakerItem title={item.title}
                               description={item.description}
                               url={item.url}
+                              key={index}
             />
         });
 

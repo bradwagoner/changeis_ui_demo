@@ -3,7 +3,7 @@ import {OverlayTrigger, Tooltip} from "react-bootstrap";
 import {OverlayInjectedProps} from "react-bootstrap/Overlay";
 
 export const FakerItem = (fakerData: FakerDataModel) => {
-    // export const FakerItem = (fakerData: {title: string, description: string, url: string}) => {
+    
     const renderTooltip = (props: OverlayInjectedProps) => (
         <Tooltip {...props}>
             {fakerData.description}
