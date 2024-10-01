@@ -21,7 +21,6 @@ The source code for the Angular implementation is located in the /changeis-ng di
 Angular version 18.2.0 was used, to setup the project:
 
 Using a terminal cd to the ./changeit-ng directory and execute the following commands:
-- If you don't already have node 18.19.1 or newer run:
 - If you don't already have the angular cli run: npm install -g @angular/cli
 - npm install
 - ng serve
